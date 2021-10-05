@@ -107,13 +107,15 @@ PORT   STATE SERVICE VERSION
 
 &lt;h3 id=&#34;22-enumerate-the-website&#34;&gt;2.2 Enumerate the Website&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Open the site on the browser, we get the default Apache webserver page
-![[Pasted image 20211004233047.png]]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We can run gobuster to enumerate the website further for directories.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Open the site on the browser, we get the default Apache webserver page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+  &lt;img src=&#34;/img/vulnhub/noobbox/Pasted%20image%2020211004233047.png&#34;  alt=&#34;Default Apache Page&#34;  class=&#34;left&#34;  style=&#34;border-radius: 0px;&#34;  /&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;We can run gobuster to enumerate the website further for directories.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
